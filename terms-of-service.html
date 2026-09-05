@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of service — Apex Technologies Limited</title>
+<style>
+  :root {
+    --ink: #0F1115;
+    --paper: #F7F7F5;
+    --accent: #5B6CFF;
+    --muted: #8A8F98;
+    --hairline: #E4E4E1;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .top {
+    border-bottom: 1px solid var(--hairline);
+    background: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+
+  .top-inner {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 20px 32px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .wordmark {
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+
+  .wordmark span { color: var(--accent); }
+
+  .doc-meta {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .layout {
+    max-width: 1040px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 56px;
+    padding: 48px 32px 120px;
+  }
+
+  nav.side {
+    position: sticky;
+    top: 78px;
+    align-self: start;
+    font-size: 13.5px;
+  }
+
+  nav.side ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid var(--hairline);
+  }
+
+  nav.side li { margin: 0; }
+
+  nav.side a {
+    display: block;
+    color: var(--muted);
+    padding: 7px 0 7px 16px;
+    border-left: 1px solid transparent;
+    margin-left: -1px;
+  }
+
+  nav.side a:hover { color: var(--ink); text-decoration: none; }
+
+  nav.side a.active {
+    color: var(--ink);
+    border-left-color: var(--accent);
+  }
+
+  main { min-width: 0; }
+
+  .doc-head { margin-bottom: 40px; }
+
+  h1 {
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    margin: 0 0 12px;
+  }
+
+  .doc-head p {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0;
+    max-width: 60ch;
+    line-height: 1.6;
+  }
+
+  section {
+    max-width: 68ch;
+    padding-top: 36px;
+    margin-top: 36px;
+    border-top: 1px solid var(--hairline);
+    scroll-margin-top: 88px;
+  }
+
+  section:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+
+  h2 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 14px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  h2 .n {
+    color: var(--muted);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+
+  h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 22px 0 8px;
+  }
+
+  p, li {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #33363B;
+    margin: 0 0 14px;
+  }
+
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 4px 0 20px;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+  }
+
+  th {
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 12.5px;
+  }
+
+  .note {
+    background: #FFFFFF;
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+    color: #4A4E55;
+    margin: 4px 0 20px;
+  }
+
+  .note strong { color: var(--ink); }
+
+  footer.doc {
+    max-width: 68ch;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--hairline);
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .mobile-nav { display: none; }
+
+  @media (max-width: 860px) {
+    .layout { grid-template-columns: 1fr; gap: 0; padding: 32px 20px 80px; }
+    nav.side { display: none; }
+    .mobile-nav {
+      display: block;
+      margin-bottom: 32px;
+    }
+    .mobile-nav select {
+      width: 100%;
+      font-size: 14px;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--hairline);
+      background: #fff;
+      color: var(--ink);
+    }
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="top-inner">
+    <div class="wordmark">Apex<span>·</span>Technologies</div>
+    <div class="doc-meta">Terms of service · Effective 5 September 2026</div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="side" id="sidenav">
+    <ol>
+      <li><a href="#agreement">Agreement to terms</a></li>
+      <li><a href="#accounts">Accounts</a></li>
+      <li><a href="#acceptable-use">Acceptable use</a></li>
+      <li><a href="#subscriptions">Subscriptions and billing</a></li>
+      <li><a href="#intellectual-property">Intellectual property</a></li>
+      <li><a href="#customer-content">Your content</a></li>
+      <li><a href="#third-party">Third-party services</a></li>
+      <li><a href="#termination">Termination</a></li>
+      <li><a href="#disclaimers">Disclaimers</a></li>
+      <li><a href="#liability">Limitation of liability</a></li>
+      <li><a href="#governing-law">Governing law</a></li>
+      <li><a href="#changes">Changes to these terms</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <div class="mobile-nav">
+      <select onchange="if(this.value) window.location.hash = this.value;">
+        <option value="">Jump to section…</option>
+        <option value="agreement">Agreement to terms</option>
+        <option value="accounts">Accounts</option>
+        <option value="acceptable-use">Acceptable use</option>
+        <option value="subscriptions">Subscriptions and billing</option>
+        <option value="intellectual-property">Intellectual property</option>
+        <option value="customer-content">Your content</option>
+        <option value="third-party">Third-party services</option>
+        <option value="termination">Termination</option>
+        <option value="disclaimers">Disclaimers</option>
+        <option value="liability">Limitation of liability</option>
+        <option value="governing-law">Governing law</option>
+        <option value="changes">Changes to these terms</option>
+        <option value="contact">Contact us</option>
+      </select>
+    </div>
+
+    <div class="doc-head">
+      <h1>Terms of service</h1>
+      <p>These terms govern your access to and use of Apex Technologies Limited's products, applications, and websites. This is demo content generated for testing purposes and is not a real legal document.</p>
+    </div>
+
+    <section id="agreement">
+      <h2><span class="n">01</span>Agreement to terms</h2>
+      <p>By creating an account or otherwise using our services, you agree to be bound by these terms. If you're using our services on behalf of an organization, you're agreeing on its behalf and confirming you have the authority to do so.</p>
+      <p>If you don't agree to these terms, don't use our services.</p>
+    </section>
+
+    <section id="accounts">
+      <h2><span class="n">02</span>Accounts</h2>
+      <ul>
+        <li>You must provide accurate and complete information when creating an account</li>
+        <li>You're responsible for safeguarding your password and for any activity under your account</li>
+        <li>You must notify us promptly if you become aware of any unauthorized use of your account</li>
+        <li>You must be at least 16 years old to use our services</li>
+      </ul>
+    </section>
+
+    <section id="acceptable-use">
+      <h2><span class="n">03</span>Acceptable use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use our services for any unlawful purpose or in violation of any applicable regulation</li>
+        <li>Attempt to gain unauthorized access to our systems, other accounts, or connected networks</li>
+        <li>Reverse engineer, decompile, or disassemble any part of our services, except where permitted by law</li>
+        <li>Introduce malware, viruses, or any code intended to disrupt or damage our services</li>
+        <li>Resell, sublicense, or redistribute our services without our written consent</li>
+        <li>Use our services to build a directly competing product</li>
+      </ul>
+      <div class="note"><strong>Note:</strong> We may suspend or terminate accounts that violate this section without prior notice.</div>
+    </section>
+
+    <section id="subscriptions">
+      <h2><span class="n">04</span>Subscriptions and billing</h2>
+      <p>Some features require a paid subscription. By subscribing, you authorize us to charge your chosen payment method on a recurring basis until you cancel.</p>
+      <table>
+        <tr><th>Item</th><th>Terms</th></tr>
+        <tr><td>Billing cycle</td><td>Monthly or annual, as selected at signup</td></tr>
+        <tr><td>Price changes</td><td>30 days' advance notice before taking effect</td></tr>
+        <tr><td>Cancellation</td><td>Takes effect at the end of the current billing period</td></tr>
+        <tr><td>Refunds</td><td>Prorated refunds are not provided except where required by law</td></tr>
+      </table>
+    </section>
+
+    <section id="intellectual-property">
+      <h2><span class="n">05</span>Intellectual property</h2>
+      <p>Our services, including all software, designs, logos, and documentation, are owned by Apex Technologies Limited and protected by intellectual property laws. These terms don't grant you any ownership rights — only a limited, non-exclusive, non-transferable license to use our services as intended.</p>
+    </section>
+
+    <section id="customer-content">
+      <h2><span class="n">06</span>Your content</h2>
+      <p>You retain ownership of any content you upload, create, or store using our services ("your content"). By using our services, you grant us a limited license to host, process, and display your content solely to provide and improve our services.</p>
+      <p>You're responsible for your content and confirm you have the necessary rights to share it with us.</p>
+    </section>
+
+    <section id="third-party">
+      <h2><span class="n">07</span>Third-party services</h2>
+      <p>Our services may integrate with or link to third-party tools, such as authentication providers or payment processors. We aren't responsible for the content, policies, or practices of any third-party service, and your use of them is subject to their own terms.</p>
+    </section>
+
+    <section id="termination">
+      <h2><span class="n">08</span>Termination</h2>
+      <p>You may stop using our services and close your account at any time. We may suspend or terminate your access if you violate these terms, pose a security risk, or if we discontinue the service, with notice where reasonably possible.</p>
+      <p>Sections that by their nature should survive termination — including intellectual property, disclaimers, and limitation of liability — will continue to apply.</p>
+    </section>
+
+    <section id="disclaimers">
+      <h2><span class="n">09</span>Disclaimers</h2>
+      <p>Our services are provided "as is" and "as available," without warranties of any kind, whether express or implied, including merchantability, fitness for a particular purpose, and non-infringement. We don't guarantee that our services will be uninterrupted, error-free, or completely secure.</p>
+    </section>
+
+    <section id="liability">
+      <h2><span class="n">10</span>Limitation of liability</h2>
+      <p>To the fullest extent permitted by law, Apex Technologies Limited won't be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenue, arising from your use of our services. Our total liability for any claim won't exceed the amount you paid us in the twelve months preceding the claim.</p>
+    </section>
+
+    <section id="governing-law">
+      <h2><span class="n">11</span>Governing law</h2>
+      <p>These terms are governed by the laws of the Federal Republic of Nigeria, without regard to its conflict of law principles. Any disputes will be subject to the exclusive jurisdiction of the courts of Lagos State.</p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="n">12</span>Changes to these terms</h2>
+      <p>We may update these terms from time to time. If we make material changes, we'll notify you by email or through a notice on our website before the changes take effect. Continued use of our services after changes take effect constitutes acceptance of the new terms.</p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="n">13</span>Contact us</h2>
+      <p>Questions about these terms can be sent to:</p>
+      <p style="margin-bottom:2px"><strong>Apex Technologies Limited</strong></p>
+      <p style="margin-bottom:2px">Legal Department</p>
+      <p style="margin-bottom:2px">42 Marina Way, Victoria Island, Lagos, Nigeria</p>
+      <p style="margin-bottom:2px">Email: <a href="mailto:legal@apextechnologies.demo">legal@apextechnologies.demo</a></p>
+      <p>Phone: +234 (0) 1 234 5678</p>
+    </section>
+
+    <footer class="doc">
+      Apex Technologies Limited — this is placeholder content generated for demonstration and testing purposes only.
+    </footer>
+  </main>
+</div>
+
+<script>
+  const links = document.querySelectorAll('nav.side a');
+  const sections = document.querySelectorAll('main section[id]');
+  const setActive = () => {
+    let current = sections[0] && sections[0].id;
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+  };
+  window.addEventListener('scroll', setActive);
+  setActive();
+</script>
+
+</body>
+</html>
